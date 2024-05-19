@@ -5,11 +5,12 @@ import { CartItem } from '../../../shared/models/CartItem';
 import { TitleComponent } from '../../partials/title/title.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 
 @Component({
   selector: 'app-cart-page',
   standalone: true,
-  imports: [TitleComponent, CommonModule, NgFor, RouterLink],
+  imports: [TitleComponent, CommonModule, NgFor, RouterLink, NotFoundComponent],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.css'
 })

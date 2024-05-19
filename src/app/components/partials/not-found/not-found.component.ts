@@ -1,0 +1,20 @@
+import { CommonModule, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-not-found',
+  standalone: true,
+  imports: [CommonModule, NgIf, RouterLink],
+  templateUrl: './not-found.component.html',
+  styleUrl: './not-found.component.css'
+})
+export class NotFoundComponent {
+  @Input() visible: boolean = false;
+  @Input() notFoundMessage: string = "Nothing Found!";
+  @Input() resetLinkText: string | any[] = "Reset";
+  @Input() resetLinkRoute: string = "/";
+
+  constructor() {}
+
+}
